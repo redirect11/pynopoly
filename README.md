@@ -1,0 +1,2 @@
+# pynopoly
+Monopoly in python
