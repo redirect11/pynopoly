@@ -1,8 +1,18 @@
-class Board:
-    def __init__(self, players, props):
+import pygame
+
+
+class Board(pygame.sprite.Sprite):
+    def __init__(self, players, props, board_img, board_rect):
+        pygame.sprite.Sprite.__init__(self)
+        self.image, self.rect = board_img, board_rect
         self.players = players
         self.props = props
         self.__current_player = None
+
+    def update(self):
+        "move the fist based on the mouse position"
+        pos = pygame.mouse.get_pos()
+        self.rect.midtop = pos
 
     def set_current_player(self, player):
         print("\nE' il tuo turno '{0}'".format(player.name))
