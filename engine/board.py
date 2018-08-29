@@ -1,8 +1,11 @@
 class Board:
-    def __init__(self, players, props):
-        self.players = players
+    def __init__(self, props):
+        self.players = []
         self.props = props
         self.__current_player = None
+
+    def add_player(self, player):
+        self.players.append(player)
 
     def set_current_player(self, player):
         print("\nE' il tuo turno '{0}'".format(player.name))

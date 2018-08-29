@@ -2,10 +2,11 @@ from random import randint
 
 
 class Player:
-    def __init__(self, name, money):
+    def __init__(self, name, money, color):
         self.name = name
         self.money = money
         self.current_pos = 0
+        self.color = color
 
     def pay_player(self, player, how_much):
         print("stai pagando '{0}'".format(how_much))
